@@ -16,11 +16,11 @@ interface NameDao {
     fun getName(id: Int): NameEntities
 
     @Delete()
-    fun deleteName(nameEntities: NameEntities)
+    suspend fun deleteName(nameEntities: NameEntities)
 
     @Insert(onConflict = IGNORE)
-    fun addName(nameEntities: NameEntities)
+    suspend fun addName(nameEntities: NameEntities)
 
     @Update
-    fun updateName(nameEntities: NameEntities)
+    suspend fun updateName(nameEntities: NameEntities)
 }

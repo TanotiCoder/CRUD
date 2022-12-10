@@ -14,15 +14,15 @@ class NameRepositoryImpl(private val nameDao: NameDao) : NameRepository {
         return nameDao.getName(id)
     }
 
-    override fun addNameInRoom(nameEntities: NameEntities) {
+    override suspend fun addNameInRoom(nameEntities: NameEntities) {
         return nameDao.addName(nameEntities)
     }
 
-    override fun deleteNameFromRoom(nameEntities: NameEntities) {
+    override suspend  fun deleteNameFromRoom(nameEntities: NameEntities) {
         return nameDao.deleteName(nameEntities)
     }
 
-    override fun updateNameInRoom(nameEntities: NameEntities) {
+    override suspend  fun updateNameInRoom(nameEntities: NameEntities) {
         return nameDao.updateName(nameEntities)
     }
 }

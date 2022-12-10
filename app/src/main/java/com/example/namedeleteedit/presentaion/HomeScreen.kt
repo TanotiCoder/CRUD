@@ -48,7 +48,7 @@ fun HomeScreen(viewModel: NameViewModel = hiltViewModel()) {
             enabled = nameForEditBox.isNotBlank()
         ) { Text(text = addName) }
         Divider()
-        LazyColumn() {
+        LazyColumn(reverseLayout = true,) {
             items(items = nameCollection) {
                 ItemCard(
                     nameEntities = it,

@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 interface NameRepository {
     fun getNamesFromRoom(): Flow<names>
     fun getNameFrom(id: Int): NameEntities
-    fun addNameInRoom(nameEntities: NameEntities)
-    fun deleteNameFromRoom(nameEntities: NameEntities)
-    fun updateNameInRoom(nameEntities: NameEntities)
+    suspend fun addNameInRoom(nameEntities: NameEntities)
+    suspend fun deleteNameFromRoom(nameEntities: NameEntities)
+    suspend fun updateNameInRoom(nameEntities: NameEntities)
 }
